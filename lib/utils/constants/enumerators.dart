@@ -1,0 +1,1 @@
+enum WishListJobStatus { available, applied }
