@@ -1,5 +1,6 @@
 import 'package:duty_doctor/app.dart';
 import 'package:duty_doctor/presentation/view/shared/widgets/dotted_divider.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class DashGraphSection extends StatelessWidget {
   const DashGraphSection({super.key});
@@ -35,11 +36,32 @@ class DashGraphSection extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              width: 110.w,
-              height: 110.w,
-              color: Colors.white,
-              child: const Placeholder(),
+
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                SizedBox(
+                  width: 110.w,
+                  height: 110.w,
+                  child: SfCircularChart(
+                    margin: EdgeInsets.zero,
+
+                    series: <CircularSeries>[
+                      DoughnutSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData data, _) => data.category,
+                        yValueMapper: (ChartData data, _) => data.value,
+                        // dataLabelSettings: const DataLabelSettings(isVisible: true),
+                        innerRadius: '80%',
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                  "70.22%",
+                  style: TextStyle(fontSize: 16.sp, fontFamily: 'semibold'),
+                ),
+              ],
             ),
           ],
         ),
@@ -47,3 +69,21 @@ class DashGraphSection extends StatelessWidget {
     );
   }
 }
+
+class ChartData {
+  final String category;
+  final double value;
+
+  ChartData(this.category, this.value);
+}
+
+final List<ChartData> chartData = [
+  ChartData('Food', 20),
+  ChartData('Travel', 28),
+  ChartData('Shopping', 24),
+  ChartData('Others', 2),
+  ChartData('Foods', 5),
+  ChartData('Travels', 8),
+  ChartData('Shopsping', 4),
+  ChartData('Otherss', 3),
+];

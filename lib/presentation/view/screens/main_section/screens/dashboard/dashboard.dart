@@ -13,17 +13,19 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(15.w),
-          child: const CustomScrollView(
-            slivers: [
-              DashBoardAppbar(),
-              DashGraphSection(),
-              DashStatusGridSection(),
-              DashOngoingDutySection(),
-              DashUpcomingDutys(),
-              DashRecommendedDutys(),
-            ],
+        body: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15.w),
+            child: const CustomScrollView(
+              slivers: [
+                DashBoardAppbar(),
+                DashGraphSection(),
+                DashStatusGridSection(),
+                DashOngoingDutySection(),
+                DashUpcomingDutys(),
+                DashRecommendedDutys(),
+              ],
+            ),
           ),
         ),
       ),

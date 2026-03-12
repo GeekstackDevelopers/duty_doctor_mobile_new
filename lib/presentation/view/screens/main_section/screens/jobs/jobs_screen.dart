@@ -1,6 +1,5 @@
 import 'package:duty_doctor/app.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/jobs/widgets/jobs_search_bar.dart';
-import 'package:duty_doctor/presentation/view/shared/widgets/custom_appbar.dart';
 import 'package:duty_doctor/presentation/view/shared/widgets/custom_dutys_tile.dart';
 
 class JobsScreen extends StatelessWidget {

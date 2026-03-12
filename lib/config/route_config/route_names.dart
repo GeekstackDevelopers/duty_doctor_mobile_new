@@ -27,6 +27,9 @@ class AppRouteNames {
   static String locationScreen = 'locationScreen';
   static String locationSearchScreen = 'locationSearchScreen';
   static String mapScreen = 'mapScreen';
+  static String upComingDutyDetailsScreen = 'upcomingDutyDetailsScreen';
+  static String dutyHistory = "dutyHistory";
+  static String feebackScreen = 'feedback';
 
   //profileSection
   static String documentAndCertificateSection = 'documentAndCertificateSection';
