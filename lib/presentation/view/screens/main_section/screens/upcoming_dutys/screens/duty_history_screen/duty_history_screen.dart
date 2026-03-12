@@ -1,5 +1,5 @@
 import 'package:duty_doctor/app.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/dutys/screens/duty_history_screen/widgets/duty_history_tile.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/duty_history_screen/widgets/duty_history_tile.dart';
 
 class DutyHistoryScreen extends StatelessWidget {
   const DutyHistoryScreen({super.key});

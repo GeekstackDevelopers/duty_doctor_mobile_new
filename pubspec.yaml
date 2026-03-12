@@ -73,6 +73,7 @@ flutter:
   assets:
     - assets/images/onboarding/
     - assets/icons/
+    - assets/images/
     - assets/lottie/
     - assets/icons/bottomnavicons/selected/
     - assets/icons/bottomnavicons/unselected/

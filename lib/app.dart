@@ -1,8 +1,9 @@
 export 'package:flutter/material.dart';
 export 'package:flutter/services.dart';
-export 'package:duty_doctor/presentation/view/screens/main_section/screens/dutys/screens/upcoming_duty_details_screen/widgets/upcoming_duty_tile.dart';
+export 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/upcoming_duty_details_screen/widgets/upcoming_duty_tile.dart';
 export 'package:duty_doctor/presentation/view/shared/widgets/custom_appbar.dart';
 export 'dart:io';
+
 export 'package:duty_doctor/config/colors.dart';
 export 'package:go_router/go_router.dart';
 export 'package:provider/provider.dart';
@@ -37,4 +38,4 @@ export 'package:duty_doctor/presentation/view/screens/main_section/screens/dashb
 export 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/profile_screen.dart';
 export 'package:duty_doctor/presentation/view/screens/main_section/screens/messages/messages_screen.dart';
 export 'package:duty_doctor/presentation/view/screens/main_section/screens/jobs/jobs_screen.dart';
-export 'package:duty_doctor/presentation/view/screens/main_section/screens/dutys/dutys_screen.dart';
+export 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/dutys_screen.dart';

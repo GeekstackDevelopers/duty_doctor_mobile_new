@@ -1,7 +1,8 @@
 import 'package:duty_doctor/app.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/dutys/screens/duty_history_screen/duty_history_screen.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/dutys/screens/duty_history_screen/screens/rate_hospital_screen/rate_hospital_screen.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/dutys/screens/upcoming_duty_details_screen/upcoming_duty_details_screen.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/jobs/screens/job_details_screen/job_detail_screen.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/duty_history_screen/duty_history_screen.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/duty_history_screen/screens/rate_hospital_screen/rate_hospital_screen.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/upcoming_duty_details_screen/upcoming_duty_details_screen.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/messages/screens/chat_page.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -50,6 +51,11 @@ class MedOneRouteConfig {
                 builder: (context, state) => const RateHospitalScreen(),
               ),
             ],
+          ),
+          GoRoute(
+            path: '/jobDetails',
+            name: AppRouteNames.jobDetailsScreen,
+            builder: (context, state) => const JobDetailScreen(),
           ),
         ],
       ),

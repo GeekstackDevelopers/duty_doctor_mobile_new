@@ -1,7 +1,7 @@
 import 'package:duty_doctor/app.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/dutys/screens/duty_history_screen/screens/rate_hospital_screen/widgets/rating_quetion_optoin_widget.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/dutys/screens/duty_history_screen/screens/rate_hospital_screen/widgets/rating_widget.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/dutys/screens/duty_history_screen/screens/rate_hospital_screen/widgets/special_note_field.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/duty_history_screen/screens/rate_hospital_screen/widgets/rating_quetion_optoin_widget.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/duty_history_screen/screens/rate_hospital_screen/widgets/rating_widget.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/duty_history_screen/screens/rate_hospital_screen/widgets/special_note_field.dart';
 
 import 'package:duty_doctor/presentation/view/shared/widgets/dotted_divider.dart';
 
