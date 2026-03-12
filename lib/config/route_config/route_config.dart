@@ -1,7 +1,11 @@
 import 'package:duty_doctor/app.dart';
 
+final rootNavigatorKey = GlobalKey<NavigatorState>();
+final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
+
 class MedOneRouteConfig {
   static GoRouter goRouter = GoRouter(
+    navigatorKey: rootNavigatorKey,
     initialLocation: '/',
     routes: [
       GoRoute(

@@ -9,11 +9,8 @@ void main() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-
   // OneSignal.initialize(OneSignalCredentials().getOneSignalAppId);
-
   // OneSignal.Notifications.requestPermission(true);
-
   runApp(
     MultiProvider(
       providers: DutyDoctorsProviders.providers,
@@ -33,6 +30,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (_, child) {
         return MaterialApp.router(
+          scaffoldMessengerKey: scaffoldMessengerKey,
           debugShowCheckedModeBanner: false,
           // locale: Locale(
           //   Provider.of<LocalizationController>(

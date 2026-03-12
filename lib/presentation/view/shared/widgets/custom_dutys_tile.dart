@@ -1,4 +1,5 @@
 import 'package:duty_doctor/app.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/dashboard/dialogs/share_duty_dialogue.dart';
 import 'package:duty_doctor/presentation/view/shared/widgets/custom_button_1.dart';
 
 class CustomDutysTile extends StatelessWidget {
@@ -53,7 +54,12 @@ class CustomDutysTile extends StatelessWidget {
                   ],
                 ),
               ),
-              SvgPicture.asset('assets/icons/share.svg', width: 22.w),
+              GestureDetector(
+                onTap: () {
+                  showShareDutyDialogue();
+                },
+                child: SvgPicture.asset('assets/icons/share.svg', width: 22.w),
+              ),
             ],
           ),
           Row(
