@@ -1,7 +1,4 @@
-import 'dart:io';
-
 import 'package:duty_doctor/app.dart';
-import 'package:flutter/services.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
