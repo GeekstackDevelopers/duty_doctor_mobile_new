@@ -79,6 +79,7 @@ class CustomButton extends StatelessWidget {
                             color: textColor ?? Colors.white,
                             fontSize: fontSize ?? 15.sp,
                             fontWeight: FontWeight.w600,
+                            letterSpacing: -.1,
                           ),
                         ),
                 ),
