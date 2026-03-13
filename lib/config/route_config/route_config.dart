@@ -1,4 +1,5 @@
 import 'package:duty_doctor/app.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/doc_and_cert_screen/doc_and_cert_screen.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
@@ -66,15 +67,18 @@ class MedOneRouteConfig {
                         path: "/jobApply3",
                         name: AppRouteNames.jobApplyScreen3,
                         builder: (context, state) => const JobApplyScreen3(),
-                        routes: [
-                  
-                ]
-              ),
+                        routes: [],
+                      ),
                     ],
                   ),
                 ],
               ),
             ],
+          ),
+          GoRoute(
+            path: "/docAndCert",
+            name: AppRouteNames.documentAndCertificateSection,
+            builder: (context, state) => const DocAndCertScreen(),
           ),
         ],
       ),

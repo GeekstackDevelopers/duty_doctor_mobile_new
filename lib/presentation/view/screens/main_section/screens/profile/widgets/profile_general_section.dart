@@ -38,9 +38,12 @@ class ProfileGeneralSection extends StatelessWidget {
             icon: "assets/icons/profile/ads_manage.svg",
             text: "Ads Manager",
           ),
-          const ProfileGeneralTile(
+          ProfileGeneralTile(
             icon: "assets/icons/profile/doc.svg",
             text: "Documents & Certificates",
+            onTap: () {
+              context.pushNamed(AppRouteNames.documentAndCertificateSection);
+            },
           ),
           const ProfileGeneralTile(
             icon: "assets/icons/profile/language.svg",
