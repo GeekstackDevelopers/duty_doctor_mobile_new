@@ -1,9 +1,4 @@
 import 'package:duty_doctor/app.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/jobs/screens/job_details_screen/job_detail_screen.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/duty_history_screen/duty_history_screen.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/duty_history_screen/screens/rate_hospital_screen/rate_hospital_screen.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/upcoming_duty_details_screen/upcoming_duty_details_screen.dart';
-import 'package:duty_doctor/presentation/view/screens/main_section/screens/messages/screens/chat_page.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
@@ -56,6 +51,30 @@ class MedOneRouteConfig {
             path: '/jobDetails',
             name: AppRouteNames.jobDetailsScreen,
             builder: (context, state) => const JobDetailScreen(),
+            routes: [
+              GoRoute(
+                path: "/jobApply1",
+                name: AppRouteNames.jobApplyScreen1,
+                builder: (context, state) => const JobApplyScreen1(),
+                routes: [
+                  GoRoute(
+                    path: "/jobApply2",
+                    name: AppRouteNames.jobApplyScreen2,
+                    builder: (context, state) => const JobApplyScreen2(),
+                    routes: [
+                      GoRoute(
+                        path: "/jobApply3",
+                        name: AppRouteNames.jobApplyScreen3,
+                        builder: (context, state) => const JobApplyScreen3(),
+                        routes: [
+                  
+                ]
+              ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),

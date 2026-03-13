@@ -20,6 +20,9 @@ class AppRouteNames {
   static String wishListScreen = 'wishListScreen';
   static String profileScreen = 'profileScreen';
   static String jobDetailsScreen = 'jobDetailsScreen';
+  static String jobApplyScreen1 = "jobApplyScreen1";
+  static String jobApplyScreen2 = "jobApplyScreen2";
+  static String jobApplyScreen3 = "jobApplyScreen3";
   static String messageScreen = 'messageScreen';
   static String notifications = 'notifications';
   static String searchScreen = 'searchScreen';

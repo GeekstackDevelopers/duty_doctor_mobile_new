@@ -1,5 +1,6 @@
 import 'package:duty_doctor/app.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/jobs/screens/job_details_screen/widgets/applied_peoples.dart';
+import 'package:duty_doctor/presentation/view/shared/widgets/dotted_divider.dart';
 
 class JobDetailTopSection extends StatelessWidget {
   const JobDetailTopSection({super.key});
@@ -52,7 +53,16 @@ class JobDetailTopSection extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            const Expanded(child: Wrap(children: [])),
+            Expanded(
+              child: Wrap(
+                spacing: 10.w,
+                children: [
+                  const JobDetailTopPointContainer(text: "PG Completed"),
+                  const JobDetailTopPointContainer(text: "MD"),
+                  const JobDetailTopPointContainer(text: "TNT"),
+                ],
+              ),
+            ),
             RichText(
               text: TextSpan(
                 text: "10 laks",
@@ -71,7 +81,30 @@ class JobDetailTopSection extends StatelessWidget {
             ),
           ],
         ),
+        SizedBox(height: 15.h),
+        const DottedDivider(),
+        SizedBox(height: 15.h),
       ],
+    );
+  }
+}
+
+class JobDetailTopPointContainer extends StatelessWidget {
+  final String text;
+  const JobDetailTopPointContainer({super.key, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(100),
+        border: Border.all(color: AppColors.black, width: 0.6),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(fontSize: 11.sp, fontFamily: 'medium'),
+      ),
     );
   }
 }
