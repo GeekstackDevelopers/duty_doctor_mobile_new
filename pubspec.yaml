@@ -83,6 +83,7 @@ flutter:
     - assets/images/temp/hospial_logo/
     - assets/icons/social/
     - assets/gif/
+    - assets/icons/profile/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
