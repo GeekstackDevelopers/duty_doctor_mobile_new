@@ -49,22 +49,34 @@ class ProfileGeneralSection extends StatelessWidget {
             icon: "assets/icons/profile/language.svg",
             text: "Language",
           ),
-          const ProfileGeneralTile(
+          ProfileGeneralTile(
             icon: "assets/icons/profile/security_settings.svg",
             text: "Security Settings",
+            onTap: () {
+              context.pushNamed(AppRouteNames.securitySettingsScreen);
+            },
           ),
-          const ProfileGeneralTile(
+          ProfileGeneralTile(
             icon: "assets/icons/profile/notificaion.svg",
             text: "Notification",
+            onTap: () {
+              context.pushNamed(AppRouteNames.notificationSettings);
+            },
           ),
-          const ProfileGeneralTile(
+          ProfileGeneralTile(
             icon: "assets/icons/profile/help.svg",
             text: "Help Center",
+            onTap: () {
+              context.pushNamed(AppRouteNames.helpCenterScreen);
+            },
           ),
-          const ProfileGeneralTile(
+          ProfileGeneralTile(
             icon: "assets/icons/profile/privacy.svg",
             text: "Privacy Poilcy",
             islast: true,
+            onTap: () {
+              context.pushNamed(AppRouteNames.privacyPolicy);
+            },
           ),
         ],
       ),

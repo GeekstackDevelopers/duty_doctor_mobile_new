@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:duty_doctor/app.dart';
 import 'package:duty_doctor/presentation/view/shared/widgets/dotted_divider.dart';
 
@@ -124,7 +126,11 @@ class ShareDutyDialogue extends StatelessWidget {
                       children: [
                         CustomSocialIcon(
                           logo: 'assets/icons/social/insta.svg',
-                          onTap: () {},
+                          onTap: () {
+                            try {} catch (e) {
+                              log(e.toString());
+                            }
+                          },
                         ),
                         CustomSocialIcon(
                           logo: 'assets/icons/social/facebook.svg',
@@ -159,15 +165,18 @@ class CustomSocialIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 46.w,
-      width: 46.w,
-      decoration: BoxDecoration(
-        color: AppColors.lightPrimaryColor,
-        border: Border.all(color: AppColors.borderColor),
-        borderRadius: BorderRadius.circular(10.r),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: 46.w,
+        width: 46.w,
+        decoration: BoxDecoration(
+          color: AppColors.lightPrimaryColor,
+          border: Border.all(color: AppColors.borderColor),
+          borderRadius: BorderRadius.circular(10.r),
+        ),
+        child: UnconstrainedBox(child: SvgPicture.asset(logo, width: 20.w)),
       ),
-      child: UnconstrainedBox(child: SvgPicture.asset(logo, width: 20.w)),
     );
   }
 }

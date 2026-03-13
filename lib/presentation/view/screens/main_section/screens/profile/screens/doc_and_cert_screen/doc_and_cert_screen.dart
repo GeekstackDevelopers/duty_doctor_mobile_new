@@ -7,7 +7,7 @@ class DocAndCertScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(titleText: "Documents & Certificates"),
+      appBar: const CustomAppbar(titleText: "Documents & Certificates"),
       body: SafeArea(
         child: Padding(
           padding: .symmetric(horizontal: 15.w),

@@ -1,5 +1,9 @@
 import 'package:duty_doctor/app.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/doc_and_cert_screen/doc_and_cert_screen.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/helpcenter_section/help_center_page.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/notification_setting_screen/notification_settings_screen.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/privacy_policy/privacy_policy.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/security_settings_section/security_settings_screen.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
@@ -79,6 +83,26 @@ class MedOneRouteConfig {
             path: "/docAndCert",
             name: AppRouteNames.documentAndCertificateSection,
             builder: (context, state) => const DocAndCertScreen(),
+          ),
+          GoRoute(
+            path: "/securitySettings",
+            name: AppRouteNames.securitySettingsScreen,
+            builder: (context, state) => const SecuritySettingsScreen(),
+          ),
+          GoRoute(
+            path: '/notificationSettings',
+            name: AppRouteNames.notificationSettings,
+            builder: (context, state) => const NotificationSettingsScreen(),
+          ),
+          GoRoute(
+            path: '/privacyPolicy',
+            name: AppRouteNames.privacyPolicy,
+            builder: (context, state) => const PrivacyPolicyScreen(),
+          ),
+          GoRoute(
+            path: '/helpcenter',
+            name: AppRouteNames.helpCenterScreen,
+            builder: (context, state) => const HelpCenterScreen(),
           ),
         ],
       ),
