@@ -24,9 +24,9 @@ class MessagelistTile extends StatelessWidget {
             width: .3,
             color: AppColors.primaryColor.withValues(alpha: 0.2),
           ),
-          image: const DecorationImage(
+          image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage('assets/images/temp/hospial_logo/image 12-3.png'),
+            image: AssetImage(chatModel.logo),
           ),
         ),
       ),
