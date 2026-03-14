@@ -17,7 +17,9 @@ class DocAndCertScreen extends StatelessWidget {
               ProfileGeneralTile(
                 icon: "assets/icons/profile/personal.svg",
                 text: "Personal Docs",
-                onTap: () {},
+                onTap: () {
+                  context.pushNamed(AppRouteNames.personalDocsSection);
+                },
               ),
               ProfileGeneralTile(
                 icon: "assets/icons/profile/professional.svg",

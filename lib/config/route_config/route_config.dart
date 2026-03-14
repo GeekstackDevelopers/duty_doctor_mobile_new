@@ -1,5 +1,6 @@
 import 'package:duty_doctor/app.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/doc_and_cert_screen/doc_and_cert_screen.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/doc_and_cert_screen/screens/personal_docs_screen/personal_docs_screen.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/helpcenter_section/help_center_page.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/language_screen/language_screen.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/notification_setting_screen/notification_settings_screen.dart';
@@ -96,6 +97,13 @@ class MedOneRouteConfig {
             path: "/docAndCert",
             name: AppRouteNames.documentAndCertificateSection,
             builder: (context, state) => const DocAndCertScreen(),
+            routes: [
+              GoRoute(
+                path: "/personalDoc",
+                name: AppRouteNames.personalDocsSection,
+                builder: (context, state) => const PersonalDocsScreen(),
+              ),
+            ],
           ),
           GoRoute(
             path: "/securitySettings",
