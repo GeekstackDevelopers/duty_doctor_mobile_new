@@ -22,17 +22,21 @@ class ProfileScreen extends StatelessWidget {
                   shape: .circle,
                   border: Border.all(width: 2, color: AppColors.primaryColor),
                 ),
-                child: UnconstrainedBox(
-                  child: Image.asset("assets/images/hari.png", width: 67.w),
+                child: Image.asset(
+                  "assets/images/temp/profile.png",
+                  // width: 67.w,
                 ),
               ),
               SizedBox(height: 10.h),
               Center(
-                child: Text("Hariharan S", style: TextStyle(fontSize: 24.sp)),
+                child: Text(
+                  "Dr. Rakesh Sharma",
+                  style: TextStyle(fontSize: 24.sp),
+                ),
               ),
               Center(
                 child: Text(
-                  "hariuxi.dsgn@gmail.com",
+                  "rakeshsharma@gmail.com",
                   style: TextStyle(fontSize: 17.sp, fontFamily: 'light'),
                 ),
               ),
