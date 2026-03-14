@@ -78,10 +78,13 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
     final Widget? effectiveLeading =
         leading ??
         (automaticallyImplyLeading && Navigator.canPop(context)
-            ? IconButton(
-                icon: const Icon(Icons.arrow_back_ios),
-                onPressed: () => Navigator.maybePop(context),
-                color: effectiveForegroundColor,
+            ? Align(
+                alignment: .centerRight,
+                child: IconButton(
+                  icon: const Icon(Icons.arrow_back_ios),
+                  onPressed: () => Navigator.maybePop(context),
+                  color: effectiveForegroundColor,
+                ),
               )
             : null);
 
@@ -105,6 +108,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
       elevation: elevation,
       shadowColor: shadowColor,
       shape: shape,
+
       backgroundColor: effectiveBackgroundColor,
       iconTheme: iconTheme ?? IconThemeData(color: effectiveForegroundColor),
       actionsIconTheme:
@@ -112,11 +116,11 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
       primary: primary,
       centerTitle: centerTitle,
       excludeHeaderSemantics: excludeHeaderSemantics,
-      titleSpacing: titleSpacing,
+      titleSpacing: 0,
       toolbarOpacity: toolbarOpacity,
       bottomOpacity: bottomOpacity,
       toolbarHeight: toolbarHeight,
-      leadingWidth: leadingWidth,
+      leadingWidth: 60.w,
       toolbarTextStyle: toolbarTextStyle,
       titleTextStyle: titleTextStyle,
       systemOverlayStyle: systemOverlayStyle ?? SystemUiOverlayStyle.dark,

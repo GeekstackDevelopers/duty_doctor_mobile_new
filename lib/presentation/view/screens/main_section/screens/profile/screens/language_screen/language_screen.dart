@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:duty_doctor/app.dart';
 
 class LanguageScreen extends StatefulWidget {
