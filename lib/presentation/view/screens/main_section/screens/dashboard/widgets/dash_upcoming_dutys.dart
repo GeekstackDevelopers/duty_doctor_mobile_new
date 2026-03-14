@@ -18,15 +18,23 @@ class DashUpcomingDutys extends StatelessWidget {
         child: Column(
           spacing: 10.h,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Upcoming Duty\'s',
-                  style: TextStyle(fontSize: 20.sp, fontFamily: 'medium'),
-                ),
-                Text("See all", style: TextStyle(fontSize: 13.sp)),
-              ],
+            InkWell(
+              onTap: () {
+                Provider.of<BottomNavController>(
+                  context,
+                  listen: false,
+                ).naviagate(3);
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Upcoming Duty\'s',
+                    style: TextStyle(fontSize: 20.sp, fontFamily: 'medium'),
+                  ),
+                  Text("See all", style: TextStyle(fontSize: 13.sp)),
+                ],
+              ),
             ),
 
             const UpcomingDutysTile(
@@ -63,43 +71,48 @@ class UpcomingDutysTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      spacing: 10.h,
-      children: [
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: 10.w,
-          children: [
-            Container(
-              width: 51.w,
-              height: 51.w,
-              padding: EdgeInsets.all(5.r),
-              decoration: BoxDecoration(
-                border: Border.all(width: 0.3),
-                borderRadius: BorderRadius.circular(10.r),
+    return GestureDetector(
+      onTap: () {
+        context.pushNamed(AppRouteNames.upComingDutyDetailsScreen);
+      },
+      child: Column(
+        spacing: 10.h,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            spacing: 10.w,
+            children: [
+              Container(
+                width: 51.w,
+                height: 51.w,
+                padding: EdgeInsets.all(5.r),
+                decoration: BoxDecoration(
+                  border: Border.all(width: 0.3),
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
+                child: Image.asset(imagePath, fit: BoxFit.cover),
               ),
-              child: Image.asset(imagePath, fit: BoxFit.cover),
-            ),
-            Expanded(
-              child: Column(
-                spacing: 5.h,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(fontFamily: 'medium', fontSize: 15.sp),
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text('ST: 10:00pm - 6:00 am')],
-                  ),
-                ],
+              Expanded(
+                child: Column(
+                  spacing: 5.h,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      title,
+                      style: TextStyle(fontFamily: 'medium', fontSize: 15.sp),
+                    ),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [Text('ST: 10:00pm - 6:00 am')],
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
-        ),
-        if (!isLast) const DottedDivider(),
-      ],
+            ],
+          ),
+          if (!isLast) const DottedDivider(),
+        ],
+      ),
     );
   }
 }

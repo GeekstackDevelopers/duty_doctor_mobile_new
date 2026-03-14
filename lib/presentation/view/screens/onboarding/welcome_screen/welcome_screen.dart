@@ -59,7 +59,9 @@ class WelcomeScreen extends StatelessWidget {
               const Spacer(flex: 2),
               CustomButton(
                 label: 'Get Started',
-                onTap: () {},
+                onTap: () {
+                  context.goNamed(AppRouteNames.mainScreen);
+                },
                 buttonColor: AppColors.backgroudColor,
                 textColor: AppColors.primaryColor,
                 fontSize: 18.sp,

@@ -159,7 +159,9 @@ class CustomDutysTile extends StatelessWidget {
                 const SizedBox(width: 10),
                 Expanded(
                   child: CustomButton1(
-                    onTap: () {},
+                    onTap: () {
+                      context.pushNamed(AppRouteNames.jobDetailsScreen);
+                    },
                     borderRadius: 15.r,
                     buttontype: ButtonOption.blue,
                     label: 'Apply Now',

@@ -10,15 +10,23 @@ class DashRecommendedDutys extends StatelessWidget {
       child: Column(
         spacing: 10.h,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Recommended Jobs",
-                style: TextStyle(fontSize: 20.sp, fontFamily: 'medium'),
-              ),
-              Text("See all", style: TextStyle(fontSize: 13.sp)),
-            ],
+          InkWell(
+            onTap: () {
+              Provider.of<BottomNavController>(
+                context,
+                listen: false,
+              ).naviagate(1);
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Recommended Jobs",
+                  style: TextStyle(fontSize: 20.sp, fontFamily: 'medium'),
+                ),
+                Text("See all", style: TextStyle(fontSize: 13.sp)),
+              ],
+            ),
           ),
           SizedBox(
             height: 210.h,
