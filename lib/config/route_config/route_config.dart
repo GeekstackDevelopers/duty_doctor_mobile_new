@@ -1,4 +1,5 @@
 import 'package:duty_doctor/app.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/dashboard/screens/notification/notification_screen.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/doc_and_cert_screen/doc_and_cert_screen.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/doc_and_cert_screen/screens/personal_docs_screen/personal_docs_screen.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/helpcenter_section/help_center_page.dart';
@@ -129,6 +130,11 @@ class MedOneRouteConfig {
             path: "/language",
             name: AppRouteNames.languageScreen,
             builder: (context, state) => const LanguageScreen(),
+          ),
+          GoRoute(
+            path: "/notifications",
+            name: AppRouteNames.notifications,
+            builder: (context, state) => const NotificationScreen(),
           ),
         ],
       ),

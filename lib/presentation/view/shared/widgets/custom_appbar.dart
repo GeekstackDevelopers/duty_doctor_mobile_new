@@ -108,7 +108,6 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
       elevation: elevation,
       shadowColor: shadowColor,
       shape: shape,
-
       backgroundColor: effectiveBackgroundColor,
       iconTheme: iconTheme ?? IconThemeData(color: effectiveForegroundColor),
       actionsIconTheme:
@@ -116,7 +115,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
       primary: primary,
       centerTitle: centerTitle,
       excludeHeaderSemantics: excludeHeaderSemantics,
-      titleSpacing: 0,
+      titleSpacing: Navigator.canPop(context) ? 0 : titleSpacing,
       toolbarOpacity: toolbarOpacity,
       bottomOpacity: bottomOpacity,
       toolbarHeight: toolbarHeight,

@@ -44,18 +44,23 @@ class DashBoardAppbar extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              height: 50.w,
-              width: 50.w,
-              decoration: BoxDecoration(
-                color: AppColors.lightPrimaryColor,
-                borderRadius: BorderRadius.circular(100),
-              ),
-              child: UnconstrainedBox(
-                child: SvgPicture.asset(
-                  'assets/icons/notification_home.svg',
-                  width: 25.w,
-                  height: 25.w,
+            GestureDetector(
+              onTap: () {
+                context.pushNamed(AppRouteNames.notifications);
+              },
+              child: Container(
+                height: 50.w,
+                width: 50.w,
+                decoration: BoxDecoration(
+                  color: AppColors.lightPrimaryColor,
+                  borderRadius: BorderRadius.circular(100),
+                ),
+                child: UnconstrainedBox(
+                  child: SvgPicture.asset(
+                    'assets/icons/notification_home.svg',
+                    width: 25.w,
+                    height: 25.w,
+                  ),
                 ),
               ),
             ),
