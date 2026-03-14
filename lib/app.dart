@@ -10,7 +10,7 @@ export 'package:duty_doctor/presentation/view/screens/main_section/screens/jobs/
 export 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/duty_history_screen/duty_history_screen.dart';
 export 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/duty_history_screen/screens/rate_hospital_screen/rate_hospital_screen.dart';
 export 'package:duty_doctor/presentation/view/screens/main_section/screens/upcoming_dutys/screens/upcoming_duty_details_screen/upcoming_duty_details_screen.dart';
-export 'package:duty_doctor/presentation/view/screens/main_section/screens/messages/screens/chat_page.dart';
+export 'package:duty_doctor/presentation/view/screens/main_section/screens/messages/screens/chat_page/chat_page.dart';
 export 'package:duty_doctor/config/colors.dart';
 export 'package:go_router/go_router.dart';
 export 'package:provider/provider.dart';

@@ -1,6 +1,7 @@
 import 'package:duty_doctor/app.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/doc_and_cert_screen/doc_and_cert_screen.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/helpcenter_section/help_center_page.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/language_screen/language_screen.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/notification_setting_screen/notification_settings_screen.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/privacy_policy/privacy_policy.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/security_settings_section/security_settings_screen.dart';
@@ -115,6 +116,11 @@ class MedOneRouteConfig {
             path: '/helpcenter',
             name: AppRouteNames.helpCenterScreen,
             builder: (context, state) => const HelpCenterScreen(),
+          ),
+          GoRoute(
+            path: "/language",
+            name: AppRouteNames.languageScreen,
+            builder: (context, state) => const LanguageScreen(),
           ),
         ],
       ),

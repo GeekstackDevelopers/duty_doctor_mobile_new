@@ -45,9 +45,12 @@ class ProfileGeneralSection extends StatelessWidget {
               context.pushNamed(AppRouteNames.documentAndCertificateSection);
             },
           ),
-          const ProfileGeneralTile(
+          ProfileGeneralTile(
             icon: "assets/icons/profile/language.svg",
             text: "Language",
+            onTap: () {
+              context.pushNamed(AppRouteNames.languageScreen);
+            },
           ),
           ProfileGeneralTile(
             icon: "assets/icons/profile/security_settings.svg",
