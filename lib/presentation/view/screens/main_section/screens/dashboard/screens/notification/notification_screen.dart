@@ -117,17 +117,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
       onDismissed: (_) => _removeNotification(notification),
       child: Container(
         margin: .only(bottom: 15.h),
-        // padding: .all(12.w),
         decoration: BoxDecoration(
           color: AppColors.backgroudColor,
           borderRadius: .circular(16.r),
-          // boxShadow: [
-          //   BoxShadow(
-          //     color: AppColors.black.withOpacity(.04),
-          //     blurRadius: 10,
-          //     offset: const Offset(0, 4),
-          //   ),
-          // ],
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
