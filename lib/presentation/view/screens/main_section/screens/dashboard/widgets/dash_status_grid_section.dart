@@ -12,20 +12,35 @@ class DashStatusGridSection extends StatelessWidget {
           spacing: 15.w,
           runSpacing: 15.h,
           children: [
-            const DashStatusGrid(
+            DashStatusGrid(
               title: "Today's\nDuty",
               value: "05+",
               imagePath: "assets/icons/todyduty.svg",
+              onTap: () {
+                Provider.of<BottomNavController>(
+                  context,
+                  listen: false,
+                ).naviagate(3);
+              },
             ),
-            const DashStatusGrid(
+            DashStatusGrid(
               title: "Active\nJobs",
               value: "07+",
               imagePath: "assets/icons/bottomnavicons/unselected/dutys_uns.svg",
+              onTap: () {
+                Provider.of<BottomNavController>(
+                  context,
+                  listen: false,
+                ).naviagate(1);
+              },
             ),
-            const DashStatusGrid(
+            DashStatusGrid(
               title: "Total\nEarnings",
               value: "₹58,400",
               imagePath: "assets/icons/earnings.svg",
+              onTap: () {
+                context.pushNamed(AppRouteNames.walletScren);
+              },
             ),
             const DashStatusGrid(
               title: "Earn\nBadges",
@@ -51,61 +66,66 @@ class DashStatusGrid extends StatelessWidget {
   final String title;
   final String value;
   final String imagePath;
+  final void Function()? onTap;
   const DashStatusGrid({
     super.key,
     required this.title,
     required this.value,
     required this.imagePath,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(10.w),
-      width: (MediaQuery.sizeOf(context).width - 45.w) / 2,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15.r),
-        border: Border.all(color: Colors.black12),
-        color: Colors.white,
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(fontSize: 17.sp, fontFamily: 'medium'),
-                ),
-                SizedBox(height: 5.h),
-                Text(
-                  value,
-                  style: TextStyle(
-                    fontSize: 27.sp,
-                    fontFamily: 'medium',
-                    color: AppColors.primaryColor,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.all(10.w),
+        width: (MediaQuery.sizeOf(context).width - 45.w) / 2,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15.r),
+          border: Border.all(color: Colors.black12),
+          color: Colors.white,
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(fontSize: 17.sp, fontFamily: 'medium'),
                   ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            width: 40.w,
-            height: 40.h,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15.r),
-              color: AppColors.lightPrimaryColor,
-            ),
-            child: Center(
-              child: UnconstrainedBox(
-                child: SvgPicture.asset(imagePath, width: 21.w),
+                  SizedBox(height: 5.h),
+                  Text(
+                    value,
+                    style: TextStyle(
+                      fontSize: 27.sp,
+                      fontFamily: 'medium',
+                      color: AppColors.primaryColor,
+                    ),
+                  ),
+                ],
               ),
             ),
-          ),
-        ],
+            Container(
+              width: 40.w,
+              height: 40.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.r),
+                color: AppColors.lightPrimaryColor,
+              ),
+              child: Center(
+                child: UnconstrainedBox(
+                  child: SvgPicture.asset(imagePath, width: 21.w),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

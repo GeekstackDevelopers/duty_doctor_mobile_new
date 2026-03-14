@@ -4,6 +4,8 @@ import 'package:duty_doctor/presentation/view/screens/main_section/screens/profi
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/notification_setting_screen/notification_settings_screen.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/privacy_policy/privacy_policy.dart';
 import 'package:duty_doctor/presentation/view/screens/main_section/screens/profile/screens/security_settings_section/security_settings_screen.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/dashboard/screens/earnings_and_payments/earnings_and_payment_screen.dart';
+import 'package:duty_doctor/presentation/view/screens/main_section/screens/dashboard/screens/wallet_screen/wallet_screen.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
@@ -30,6 +32,16 @@ class MedOneRouteConfig {
           return const MainScreen();
         },
         routes: [
+          GoRoute(
+            path: '/wallet',
+            name: AppRouteNames.walletScren,
+            builder: (context, state) => const WalletScreen(),
+          ),
+          GoRoute(
+            path: '/earningAndPayments',
+            name: AppRouteNames.earningAndPaymentScreen,
+            builder: (context, state) => const EarningsAndPaymentScreen(),
+          ),
           GoRoute(
             path: '/chat',
             name: AppRouteNames.messageScreen,

@@ -11,6 +11,7 @@ class CustomButton extends StatelessWidget {
   final double? fontSize;
   final double? borderRadius;
   final bool isInfiniteWidth;
+  final String? fontFamily;
   const CustomButton({
     super.key,
     this.onTap,
@@ -23,6 +24,7 @@ class CustomButton extends StatelessWidget {
     this.textColor,
     this.isInfiniteWidth = true,
     this.isLoading = false,
+    this.fontFamily,
   });
 
   @override
@@ -75,12 +77,14 @@ class CustomButton extends StatelessWidget {
                       : Text(
                           label,
                           style: TextStyle(
-                            fontFamily: 'lufga',
+                            fontFamily: fontFamily ?? 'lufga',
                             color: textColor ?? Colors.white,
                             fontSize: fontSize ?? 15.sp,
                             fontWeight: FontWeight.w600,
                             letterSpacing: -.1,
+                            overflow: TextOverflow.ellipsis,
                           ),
+                          maxLines: 1,
                         ),
                 ),
               ),

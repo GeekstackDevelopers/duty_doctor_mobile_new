@@ -33,6 +33,8 @@ class AppRouteNames {
   static String upComingDutyDetailsScreen = 'upcomingDutyDetailsScreen';
   static String dutyHistory = "dutyHistory";
   static String feebackScreen = 'feedback';
+  static String walletScren = 'walletScreen';
+  static String earningAndPaymentScreen = 'earningAndPaymentScreen';
 
   //profileSection
   static String documentAndCertificateSection = 'documentAndCertificateSection';
